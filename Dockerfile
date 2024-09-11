@@ -6,11 +6,11 @@ RUN     yum install -y epel-release
 RUN     yum install -y nodejs npm
 
 # Install app dependencies
-COPY /centos-node-hello/src/package.json /centos-node-hello/src/package.json
-RUN cd /centos-node-hello/src; npm install
+COPY /src/package.json /src/package.json
+RUN cd /src; npm install
 
 # Bundle app source
-COPY . /centos-node-hello/src
+COPY . /src
 
 EXPOSE  8080
-CMD ["node", "/centos-node-hello/src/index.js"]
+CMD ["node", "/src/index.js"]
