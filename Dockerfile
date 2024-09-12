@@ -1,4 +1,4 @@
-FROM    centos:centos6
+FROM    centos:latest
 
 # Enable Extra Packages for Enterprise Linux (EPEL) for CentOS
 RUN     dnf install epel-release epel-next-release
